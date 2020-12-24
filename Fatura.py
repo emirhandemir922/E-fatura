@@ -108,11 +108,11 @@ for index in range(len(data_Alıcı)):
                 exp = driver.find_element_by_id("gen__1109")
                 exp.send_keys(data_FaturalanacakTutar.upper())
                 exp.send_keys(Keys.RETURN)
+                time.sleep(1)
 
                 createbutton = driver.find_element_by_id("gen__1112").click()
 
-                time.sleep(1)
-
+                time.sleep(3)
                 okbutton = driver.find_element_by_xpath("/html/body/div[6]/div[2]/div/div/div/input").click()
 
             finally:
