@@ -8,6 +8,7 @@ import sys
 import time
 import smtplib
 import mimetypes
+import xlrd
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
@@ -21,6 +22,9 @@ from email.message import EmailMessage
 if (__name__ == "__main__"):
     PATH_DRIVER = "chromedriver.exe"
     PATH_EXCEL = "test.xlsx"
+
+    xlrd.xlsx.ensure_elementtree_imported(False, None)
+    xlrd.xlsx.Element_has_iter = True
 
     current_working_directory = os.getcwd()
     client = pdfcrowd.HtmlToPdfClient('TheDifferent', 'ce544b6ea52a5621fb9d55f8b542d14d')
