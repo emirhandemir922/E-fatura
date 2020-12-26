@@ -1,0 +1,4 @@
+-Excel dosyasýnýn türkçe karakterlere uyumunu saðla.
+-Menü hazýrla.
+-Arayüz tasarla ve çalýþmaya hazýr hale getir.
+-Muhasebe programý haline getir.

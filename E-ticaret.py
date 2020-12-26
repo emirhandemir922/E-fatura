@@ -1,4 +1,6 @@
 import os
+import Fatura
+import Mail
 
 print("Hoşgeldiniz")
 print("Bir seçenek seçiniz :")
@@ -7,10 +9,8 @@ print("1.Fatura yazdırma \n"
 choice = input("Bir rakam girip enter a basınız :")
 
 if(choice == "1" or choice == " 1"):
-    print("Seçenek 1 seçildi")
+    os.system('Fatura.py')
 elif(choice == "2" or choice == " 2"):
-    print("Seçenek 2 seçildi")
+    exec(open("Mail.py").read())
 else:
     print("Lütfen geçerli bir seçenek giriniz (Örn: '1' veya '2'")
-
-
