@@ -19,7 +19,7 @@ from zipfile import ZipFile
 from pyhtml2pdf import converter
 from email.message import EmailMessage
 
-if (__name__ == "__main__"):
+if __name__ == "__main__":
     PATH_DRIVER = "chromedriver.exe"
     PATH_EXCEL = "test.xlsx"
 
@@ -43,11 +43,11 @@ if (__name__ == "__main__"):
 
     driver.get("https://earsivportal.efatura.gov.tr/intragiris.html")
     userid = driver.find_element_by_id("userid")
-    userid.send_keys("12305487")
+    userid.send_keys("********")
     userid.send_keys(Keys.RETURN)
 
     userpassword = driver.find_element_by_id("password")
-    userpassword.send_keys("662252")
+    userpassword.send_keys("******")
     userpassword.send_keys(Keys.RETURN)
 
     enter = driver.find_element_by_name("action")
@@ -90,10 +90,6 @@ if (__name__ == "__main__"):
                 submit_button = driver.find_element_by_id("gen__1026").click()
                 time.sleep(5)
 
-                bill_number = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div[2]"
-                                                       "/div/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr[11]/td/span").text
-                bill_number = bill_number.split()
-
                 page_number = driver.find_element_by_xpath("/html/body/div[1]/div/div[2]/div/div/div/div/div/div[2]/div[2]/div/div/div/div/div[2]"
                                                        "/div/div/div[2]/div[2]/div/div/div[2]/div/div/table/tbody/tr[11]/td/div/span[5]").text
                 page_number = page_number.replace("/", "")
@@ -128,8 +124,8 @@ if (__name__ == "__main__"):
 
                             for html_file in os.listdir(current_working_directory):
                                 if html_file.endswith(".html"):
-                                    path = os.path.abspath('test.html')
-                                    converter.convert(f'file:///{path}', 'sample.pdf')
+                                    path = os.path.abspath(html_file)
+                                    converter.convert(f'file:///{path}', data_Alici_pdf[bill_index] + '.pdf')
                                     os.remove(html_file)
 
                             for xml_file in os.listdir(current_working_directory):
@@ -139,13 +135,13 @@ if (__name__ == "__main__"):
 
                             recipient = data_Mail[bill_index]
                             message = EmailMessage()
-                            sender = "emirhandemir922@gmail.com"
-                            password = 'E121011e'
+                            sender = "the.different.fatura@gmail.com"
+                            password = 'Aysteks2020.'
 
                             message['From'] = sender
                             message['To'] = recipient
-                            message['Subject'] = 'Learning to send email from medium.com'
-                            body = 'Hello I am learning to send emails using Python!!!'
+                            message['Subject'] = 'Faturanız'
+                            body = 'Merhaba, faturanızı ekte bulabilirsiniz.'
 
                             message.set_content(body)
                             mime_type, _ = mimetypes.guess_type(data_Alici_pdf[bill_index] + '.pdf')

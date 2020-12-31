@@ -1,4 +1,5 @@
--Excel dosyasının türkçe karakterlere uyumunu sağla.
--Menü hazırla.
--Arayüz tasarla ve çalışmaya hazır hale getir.
--Muhasebe programı haline getir.
+-Excel dosyasÄ±nÄ±n tÃ¼rkÃ§e karakterlere uyumunu saÄŸla.
+-MenÃ¼yÃ¼ dÃ¼zenle.
+-ArayÃ¼z tasarla ve Ã§alÄ±ÅŸmaya hazÄ±r hale getir.
+-Muhasebe/E-ticaret programÄ± haline getir.
+
