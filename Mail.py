@@ -43,11 +43,11 @@ if __name__ == "__main__":
 
     driver.get("https://earsivportal.efatura.gov.tr/intragiris.html")
     userid = driver.find_element_by_id("userid")
-    userid.send_keys("12305487")
+    userid.send_keys("********")
     userid.send_keys(Keys.RETURN)
 
     userpassword = driver.find_element_by_id("password")
-    userpassword.send_keys("662252")
+    userpassword.send_keys("******")
     userpassword.send_keys(Keys.RETURN)
 
     enter = driver.find_element_by_name("action")
