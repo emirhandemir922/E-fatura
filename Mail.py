@@ -43,11 +43,11 @@ if __name__ == "__main__":
 
     driver.get("https://earsivportal.efatura.gov.tr/intragiris.html")
     userid = driver.find_element_by_id("userid")
-    userid.send_keys("********")
+    userid.send_keys("12305487")
     userid.send_keys(Keys.RETURN)
 
     userpassword = driver.find_element_by_id("password")
-    userpassword.send_keys("******")
+    userpassword.send_keys("662252")
     userpassword.send_keys(Keys.RETURN)
 
     enter = driver.find_element_by_name("action")
@@ -149,13 +149,14 @@ if __name__ == "__main__":
 
                             with open(data_Alici_pdf[bill_index] + '.pdf', 'rb') as file:
                                 message.add_attachment(file.read(),
-                                                   maintype=mime_type,
-                                                   subtype=mime_subtype,
-                                                   filename=data_Alici_pdf[bill_index] + '.pdf')
-
+                                maintype=mime_type,
+                                subtype=mime_subtype,
+                                filename=data_Alici_pdf[bill_index] + '.pdf')
                             mail_server = smtplib.SMTP_SSL('smtp.gmail.com')
                             mail_server.login(sender, password)
                             mail_server.send_message(message)
+
+                            shutil.move(data_Alici_pdf[bill_index] + '.pdf', 'Faturalar/' + data_Alici_pdf[bill_index] + '.pdf')
 
                             bill_index = bill_index + 1
 
