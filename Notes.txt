@@ -1,5 +1,7 @@
--Excel dosyasının türkçe karakterlere uyumunu sağla.
--Menüyü düzenle.
 -Arayüz tasarla ve çalışmaya hazır hale getir.
+-Driverın tarayıcının sürümüyle aynı olup olmadığını kontrol et.
+-Birden fazla tarayıcı sseçeneği ekle.
+-Menüyü düzenle.
+-File explorer ekle.
 -Muhasebe/E-ticaret programı haline getir.
 
