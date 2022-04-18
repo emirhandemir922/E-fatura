@@ -1,9 +1,0 @@
--Liste sorununu gider.
--Program e-arşive giriş yapıldıktan sonra çalışılcak hale getir.
--Arayüz tasarla ve çalışmaya hazır hale getir.
--Menüyü düzenle.
--File explorer ekle.
--Driverın tarayıcının sürümüyle aynı olup olmadığını kontrol et.
--Muhasebe/E-ticaret programı haline getir.
--Birden fazla tarayıcı seçeneği ekle.
-
