@@ -27,7 +27,7 @@ if __name__ == "__main__":
     xlrd.xlsx.Element_has_iter = True
 
     current_working_directory = os.getcwd()
-    client = pdfcrowd.HtmlToPdfClient('TheDifferent', 'ce544b6ea52a5621fb9d55f8b542d14d')
+    client = pdfcrowd.HtmlToPdfClient('*****', '******')
     chrome_options = webdriver.ChromeOptions()
     prefs = {'download.default_directory': current_working_directory}
     chrome_options.add_experimental_option('prefs', prefs)
@@ -135,8 +135,8 @@ if __name__ == "__main__":
 
                             recipient = data_Mail[bill_index]
                             message = EmailMessage()
-                            sender = "the.different.fatura@gmail.com"
-                            password = 'Aysteks2020.'
+                            sender = "*******"
+                            password = '*******'
 
                             message['From'] = sender
                             message['To'] = recipient
